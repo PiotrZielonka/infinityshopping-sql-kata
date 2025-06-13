@@ -2,8 +2,6 @@
 ----------------------------------------------------------------------------------  TABLE USERS  ------------------------------------------------------------------------------------  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
 CREATE TABLE users (
     id BIGSERIAL PRIMARY KEY,
     login VARCHAR(50) UNIQUE NOT NULL,
@@ -108,6 +106,7 @@ VALUES
     (49, 'Minerals', 'Chromium Sugar Balance', 145, 17.50, 3.50, 21.00, 320, 'Supports healthy blood sugar levels.', NOW(), NOW(), '\x', 'image/png'),
     (50, 'Aloes', 'Aloe Vera Hair Serum', 210, 29.00, 5.80, 34.80, 470, 'Aloe-infused serum for healthy, shiny hair.', NOW(), NOW(), '\x', 'image/jpeg');
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------  TABLE CART  -------------------------------------------------------------------------------------  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -144,7 +143,6 @@ VALUES
     (8, 130.30, 160.66, 13.00, 16.06, 143.30, 176.72, 8),
     (9, 210.10, 258.12, 21.00, 25.81, 231.10, 283.93, 9),
     (10, 95.95, 118.12, 9.50, 11.81, 105.45, 129.93, 10);
-
     
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -170,60 +168,6 @@ CREATE TABLE product_in_cart (
     FOREIGN KEY (product_id) REFERENCES product(id),
     FOREIGN KEY (cart_id) REFERENCES cart(id)
 );
-
-
--- INSERT INTO product_in_cart (id, category, name, quantity, price_net, vat, price_gross, total_price_net, total_price_gross, stock, description, image, image_content_type, product_id, cart_id)
--- VALUES
--- (1, 'Probiotics', 'Probiotic Supplement A', 10, 20.00, 5.00, 25.00, 200.00, 250.00, 500, 'A high-quality probiotic supplement.', '\x', 'image/png', 1, 1),
--- (2, 'Collagen', 'Collagen Booster B', 10, 30.00, 6.00, 36.00, 300.00, 360.00, 400, 'Premium collagen booster for skin health.', '\x', 'image/jpeg', 2, 1),
--- (3, 'Vitamins', 'Vitamin C 1000mg', 10, 10.00, 2.00, 12.00, 100.00, 120.00, 300, 'Boosts immunity with high-dose Vitamin C.', '\x', 'image/png', 3, 1),
--- (4, 'Minerals', 'Magnesium Complex', 10, 15.00, 3.00, 18.00, 150.00, 180.00, 350, 'Essential magnesium for muscle relaxation.', '\x', 'image/jpeg', 4, 1),
--- (5, 'Aloes', 'Aloe Vera Extract', 10, 25.00, 5.00, 30.00, 250.00, 300.00, 450, 'Pure Aloe Vera for digestive and skin health.', '\x', 'image/png', 5, 1),
--- (6, 'Probiotics', 'Daily Gut Health Probiotic', 10, 22.50, 4.50, 27.00, 225.00, 270.00, 480, 'Supports digestive and immune health with probiotics.', '\x', 'image/jpeg', 6, 2),
--- (7, 'Collagen', 'Marine Collagen Peptides', 10, 35.00, 7.00, 42.00, 350.00, 420.00, 420, 'High-quality marine collagen for joint and skin support.', '\x', 'image/png', 7, 2),
--- (8, 'Vitamins', 'Vitamin D3 5000 IU', 10, 12.00, 2.40, 14.40, 120.00, 144.00, 310, 'Essential vitamin D3 for bone and immune health.', '\x', 'image/jpeg', 8, 2),
--- (9, 'Minerals', 'Zinc Immune Boost', 10, 18.00, 3.60, 21.60, 180.00, 216.00, 290, 'Zinc supplement for immune and skin health.', '\x', 'image/png', 9, 2),
--- (10, 'Aloes', 'Aloe Vera Juice', 10, 28.00, 5.60, 33.60, 280.00, 336.00, 500, 'Organic aloe vera juice for digestive wellness.', '\x', 'image/jpeg', 10, 2),
--- (11, 'Probiotics', 'Gut Restore Probiotic', 10, 23.50, 4.70, 28.20, 235.00, 282.00, 470, 'A potent probiotic blend for digestive balance.', '\x', 'image/png', 11, 3),
--- (12, 'Collagen', 'Collagen Ultra Blend', 10, 39.00, 7.80, 46.80, 390.00, 468.00, 410, 'A premium collagen formula for skin and joint health.', '\x', 'image/jpeg', 12, 3),
--- (13, 'Vitamins', 'Super B-Complex', 10, 21.00, 4.20, 25.20, 210.00, 252.00, 360, 'Complete B-vitamin support for energy and metabolism.', '\x', 'image/png', 13, 3),
--- (14, 'Minerals', 'Iron & Vitamin C Formula', 10, 16.00, 3.20, 19.20, 160.00, 192.00, 330, 'Enhanced iron absorption with added vitamin C.', '\x', 'image/jpeg', 14, 3),
--- (15, 'Aloes', 'Aloe Vera Facial Mist', 10, 27.00, 5.40, 32.40, 270.00, 324.00, 490, 'Refreshing aloe mist for skin hydration.', '\x', 'image/png', 15, 3),
--- (16, 'Probiotics', 'Daily Wellness Probiotic', 10, 22.00, 4.40, 26.40, 220.00, 264.00, 460, 'A daily probiotic formula for gut and immune health.', '\x', 'image/jpeg', 16, 4),
--- (17, 'Collagen', 'Collagen Youth Booster', 10, 41.00, 8.20, 49.20, 410.00, 492.00, 390, 'Supports youthful skin and strong hair.', '\x', 'image/png', 17, 4),
--- (18, 'Vitamins', 'High-Potency Vitamin C', 10, 15.00, 3.00, 18.00, 150.00, 180.00, 340, 'Antioxidant support for a strong immune system.', '\x', 'image/jpeg', 18, 4),
--- (19, 'Minerals', 'Zinc & Selenium Defense', 10, 19.50, 3.90, 23.40, 195.00, 234.00, 320, 'A powerful mineral blend for immune protection.', '\x', 'image/png', 19, 4),
--- (20, 'Aloes', 'Aloe & Coconut Hair Mask', 10, 29.50, 5.90, 35.40, 295.00, 354.00, 480, 'Deep conditioning with aloe and coconut oil.', '\x', 'image/jpeg', 20, 4),
--- (21, 'Probiotics', 'Gut Balance Probiotic', 110, 23.00, 4.60, 27.60, 2530.00, 3036.00, 470, 'Supports healthy gut flora and digestion.', '\x', 'image/png', 21, 6),
--- (22, 'Collagen', 'Hydrolyzed Collagen Powder', 140, 38.00, 7.60, 45.60, 5320.00, 6384.00, 400, 'Enhances skin elasticity and joint strength.', '\x', 'image/jpeg', 22, 7),
--- (23, 'Vitamins', 'Omega-3 Fish Oil', 190, 25.00, 5.00, 30.00, 4750.00, 5700.00, 350, 'Supports heart and brain health.', '\x', 'image/png', 23, 7),
--- (24, 'Minerals', 'Potassium Plus', 160, 18.50, 3.70, 22.20, 2960.00, 3552.00, 320, 'Essential for muscle function and hydration.', '\x', 'image/jpeg', 24, 7),
--- (25, 'Aloes', 'Aloe Hydration Serum', 200, 30.00, 6.00, 36.00, 6000.00, 7200.00, 500, 'Soothes and hydrates skin.', '\x', 'image/png', 25, 7),
--- (26, 'Probiotics', 'Complete Probiotic Formula', 150, 29.00, 5.80, 34.80, 4350.00, 5220.00, 440, 'A powerful blend of probiotics for gut health.', '\x', 'image/jpeg', 26, 7),
--- (27, 'Collagen', 'Collagen Beauty Blend', 130, 42.00, 8.40, 50.40, 5460.00, 6552.00, 380, 'Supports youthful skin and hair growth.', '\x', 'image/png', 27, 7),
--- (28, 'Vitamins', 'Vitamin B12 Energy Drops', 180, 14.00, 2.80, 16.80, 2520.00, 3024.00, 310, 'Boosts energy levels and cognitive function.', '\x', 'image/jpeg', 28, 7),
--- (29, 'Minerals', 'Selenium Antioxidant Support', 170, 20.00, 4.00, 24.00, 3400.00, 4080.00, 330, 'Essential for immune and thyroid health.', '\x', 'image/png', 29, 8),
--- (30, 'Aloes', 'Aloe Vera Healing Cream', 210, 24.00, 4.80, 28.80, 5040.00, 6048.00, 480, 'Deeply nourishes and heals damaged skin.', '\x', 'image/jpeg', 30, 8),
--- (31, 'Probiotics', 'Advanced Gut Flora Probiotic', 95, 24.50, 4.90, 29.40, 2327.50, 2793.00, 460, 'A premium blend of probiotics for optimal gut health.', '\x', 'image/png', 31, 8),
--- (32, 'Collagen', 'Collagen Revitalizing Serum', 120, 45.00, 9.00, 54.00, 5400.00, 6480.00, 390, 'A potent collagen serum for skin regeneration.', '\x', 'image/jpeg', 32, 8),
--- (33, 'Vitamins', 'Multivitamin Complex', 180, 20.00, 4.00, 24.00, 3600.00, 4320.00, 350, 'A comprehensive multivitamin for overall wellness.', '\x', 'image/png', 33, 8),
--- (34, 'Minerals', 'Iron Plus Supplement', 130, 15.50, 3.10, 18.60, 2025.00, 2430.00, 330, 'Iron supplement for healthy red blood cells.', '\x', 'image/jpeg', 34, 8),
--- (35, 'Aloes', 'Aloe Vera Soothing Gel', 220, 22.00, 4.40, 26.40, 4840.00, 5808.00, 500, 'Cooling and soothing aloe vera gel for skin care.', '\x', 'image/png', 35, 8),
--- (36, 'Probiotics', 'Immune Boost Probiotic', 100, 26.00, 5.20, 31.20, 2600.00, 3120.00, 450, 'Probiotic formula designed to strengthen immunity.', '\x', 'image/jpeg', 36, 9),
--- (37, 'Collagen', 'Collagen Peptide Drink', 140, 40.00, 8.00, 48.00, 5600.00, 6720.00, 420, 'A refreshing collagen-infused beverage.', '\x', 'image/png', 37, 9),
--- (38, 'Vitamins', 'Vitamin E Antioxidant Capsules', 160, 18.00, 3.60, 21.60, 2880.00, 3456.00, 320, 'Essential antioxidant support for skin and heart.', '\x', 'image/jpeg', 38, 9),
--- (39, 'Minerals', 'Calcium & Magnesium Balance', 175, 22.50, 4.50, 27.00, 3937.50, 4725.00, 340, 'Supports bone and muscle health.', '\x', 'image/png', 39, 9),
--- (40, 'Aloes', 'Aloe Detox Juice', 190, 28.00, 5.60, 33.60, 5320.00, 6352.00, 490, 'Detoxifying and nourishing aloe vera juice.', '\x', 'image/jpeg', 40, 9),
--- (41, 'Probiotics', 'Daily Digest Probiotic', 110, 21.00, 4.20, 25.20, 2310.00, 2772.00, 470, 'A daily probiotic blend for gut balance.', '\x', 'image/png', 41, 9),
--- (42, 'Collagen', 'Collagen Infused Skincare', 125, 38.50, 7.70, 46.20, 4812.50, 5745.00, 400, 'A luxurious collagen skincare formulation.', '\x', 'image/jpeg', 42, 9),
--- (43, 'Vitamins', 'B-Complex Energy Booster', 170, 19.50, 3.90, 23.40, 3315.00, 3978.00, 360, 'B vitamins for energy and stress support.', '\x', 'image/png', 43, 9),
--- (44, 'Minerals', 'Electrolyte Hydration Mix', 150, 16.50, 3.30, 19.80, 2475.00, 2970.00, 310, 'Hydration support with essential electrolytes.', '\x', 'image/jpeg', 44, 9),
--- (45, 'Aloes', 'Aloe Radiance Moisturizer', 200, 26.50, 5.30, 31.80, 5300.00, 6360.00, 480, 'A nourishing moisturizer infused with aloe vera.', '\x', 'image/png', 45, 10),
--- (46, 'Probiotics', 'Kids Probiotic Chewables', 90, 18.00, 3.60, 21.60, 1620.00, 1944.00, 450, 'A tasty probiotic supplement for children.', '\x', 'image/jpeg', 46, 10),
--- (47, 'Collagen', 'Collagen + Hyaluronic Acid', 135, 44.00, 8.80, 52.80, 5940.00, 7056.00, 390, 'Collagen supplement with added hydration benefits.', '\x', 'image/png', 47, 10),
--- (48, 'Vitamins', 'Vitamin K2 + D3', 160, 24.00, 4.80, 28.80, 3840.00, 4608.00, 340, 'Essential for calcium absorption and bone health.', '\x', 'image/jpeg', 48, 10),
--- (49, 'Minerals', 'Chromium Sugar Balance', 145, 17.50, 3.50, 21.00, 2537.50, 3045.00, 320, 'Supports healthy blood sugar levels.', '\x', 'image/png', 49, 10),
--- (50, 'Aloes', 'Aloe Vera Hair Serum', 210, 29.00, 5.80, 34.80, 6090.00, 7372.00, 470, 'Aloe-infused serum for healthy, shiny hair.', '\x', 'image/jpeg', 50, 10);
 
 DO $$ 
 DECLARE 
@@ -329,7 +273,6 @@ VALUES
 ----------------------------------------------------------------------------------   PAYMENT   --------------------------------------------------------------------------------------  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
 
-
 CREATE TABLE payment (
     id BIGINT PRIMARY KEY,
     name VARCHAR(1000) NOT NULL,
@@ -353,7 +296,6 @@ VALUES
 ----------------------------------------------------------------------------------  TABLE PAYMENT_CART  -----------------------------------------------------------------------------  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 CREATE TABLE payment_cart (
     id BIGINT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -370,7 +312,6 @@ ADD CONSTRAINT fk_payment_cart__cart_id
 FOREIGN KEY (cart_id)
 REFERENCES cart(id);
 
-
 INSERT INTO payment_cart (id, name, price_net, vat, price_gross, payment_status, cart_id)
 VALUES
 (1, 'Bank Transfer', 5.00, 23.00, 6.15, 'WaitingForBankTransfer', 1), 
@@ -381,10 +322,10 @@ VALUES
 (7, 'PayPal', 5.00, 23.00, 6.15, 'WaitingForPayPal', 7), 
 (8, 'Cash on Delivery', 6.00, 23.00, 7.38, 'PreparationForShipping', 8); 
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------  TABLE ORDER_MAIN  -------------------------------------------------------------------------------  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 CREATE TABLE order_main (
     id BIGINT PRIMARY KEY,
@@ -403,7 +344,6 @@ CREATE TABLE order_main (
     create_time TIMESTAMP NULL,
     update_time TIMESTAMP NULL
 );
-
 
 INSERT INTO order_main (id, buyer_login, buyer_first_name, buyer_last_name, buyer_email, buyer_phone, 
                         amount_of_cart_net, amount_of_cart_gross, 
@@ -712,12 +652,9 @@ VALUES
      95.00, 116.85, 10.00, 12.30, 105.00, 129.15, 'Delivered', NOW() - INTERVAL '1 day', NOW());
 
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------  TABLE PRODUCT_IN_ORDER_MAIN  -------------------------------------------------------------------------------  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 
 CREATE TABLE product_in_order_main (
     id BIGINT PRIMARY KEY NOT NULL,
@@ -738,9 +675,7 @@ CREATE TABLE product_in_order_main (
     FOREIGN KEY (order_main_id) REFERENCES order_main(id)
 );
 
-
 -- Insert 500 testing data
-
 DO $$ 
 DECLARE 
     i INT;
@@ -809,7 +744,6 @@ END $$;
 ----------------------------------------------------------------------------------  TABLE PAYMENT_ORDER_MAIN  -----------------------------------------------------------------------  
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 CREATE TABLE payment_order_main (
     id BIGINT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -825,7 +759,6 @@ ALTER TABLE payment_order_main
 ADD CONSTRAINT fk_payment_order_main__order_main
 FOREIGN KEY (order_main_id)
 REFERENCES order_main(id);
-
 
 INSERT INTO payment_order_main (id, name, price_net, vat, price_gross, payment_status, order_main_id)
 VALUES
