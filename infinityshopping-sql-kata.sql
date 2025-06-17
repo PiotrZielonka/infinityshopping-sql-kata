@@ -30,7 +30,7 @@ VALUES
     ('user7', 'hashedpassword7', 'Daniel', 'Harris', 'daniel.harris@example.com', NULL, FALSE, 'sv', NULL, NULL, NULL, 'admin', NOW()),
     ('user8', 'hashedpassword8', 'Olivia', 'Moore', 'olivia.moore@example.com', NULL, TRUE, 'no', NULL, NULL, NULL, 'admin', NOW()),
     ('user9', 'hashedpassword9', 'Michael', 'Wilson', 'michael.wilson@example.com', 'http://example.com/michael.jpg', FALSE, 'pt', NULL, NULL, NULL, 'admin', NOW()),
-    ('user10', 'hashedpassword10', 'Sophia', 'Taylor', 'sophia.taylor@example.com', NULL, TRUE, 'pl', NULL, NULL, NULL, 'admin', NOW());
+    ('user10', 'hashedpassword10', 'Sophia', 'Taylor', 'sophia.taylor@example.com', NULL, TRUE, 'pl', NULL, NULL, NULL, 'admin', NOW()),
     ('user11', 'hashedpassword11', 'Emily', 'Nowak', 'emily.nowak@example.com', NULL, TRUE, 'pl', NULL, NULL, NULL, 'user', NOW());   
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
