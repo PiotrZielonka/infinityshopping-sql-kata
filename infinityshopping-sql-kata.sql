@@ -30,7 +30,8 @@ VALUES
     ('user7', 'hashedpassword7', 'Daniel', 'Harris', 'daniel.harris@example.com', NULL, FALSE, 'sv', NULL, NULL, NULL, 'admin', NOW()),
     ('user8', 'hashedpassword8', 'Olivia', 'Moore', 'olivia.moore@example.com', NULL, TRUE, 'no', NULL, NULL, NULL, 'admin', NOW()),
     ('user9', 'hashedpassword9', 'Michael', 'Wilson', 'michael.wilson@example.com', 'http://example.com/michael.jpg', FALSE, 'pt', NULL, NULL, NULL, 'admin', NOW()),
-    ('user10', 'hashedpassword10', 'Sophia', 'Taylor', 'sophia.taylor@example.com', NULL, TRUE, 'pl', NULL, NULL, NULL, 'admin', NOW());  
+    ('user10', 'hashedpassword10', 'Sophia', 'Taylor', 'sophia.taylor@example.com', NULL, TRUE, 'pl', NULL, NULL, NULL, 'admin', NOW());
+    ('user11', 'hashedpassword11', 'Emily', 'Nowak', 'emily.nowak@example.com', NULL, TRUE, 'pl', NULL, NULL, NULL, 'user', NOW());   
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------  TABLE PRODUCT  ----------------------------------------------------------------------------------  
@@ -67,7 +68,7 @@ VALUES
     (11, 'Probiotics', 'Gut Restore Probiotic', 105, 23.50, 4.70, 28.20, 470, 'A potent probiotic blend for digestive balance.', NOW(), NOW(), '\x', 'image/png'),
     (12, 'Collagen', 'Collagen Ultra Blend', 140, 39.00, 7.80, 46.80, 410, 'A premium collagen formula for skin and joint health.', NOW(), NOW(), '\x', 'image/jpeg'),
     (13, 'Vitamins', 'Super B-Complex', 175, 21.00, 4.20, 25.20, 360, 'Complete B-vitamin support for energy and metabolism.', NOW(), NOW(), '\x', 'image/png'),
-    (14, 'Minerals', 'Iron & Vitamin C Formula', 145, 16.00, 3.20, 19.20, 330, 'Enhanced iron absorption with added vitamin C.', NOW(), NOW(), '\x', 'image/jpeg'),
+    (14, 'Minerals', 'Iron & Vitamin C Formula', 145, 16.00, 3.20, 19.20, 5, 'Enhanced iron absorption with added vitamin C.', NOW(), NOW(), '\x', 'image/jpeg'),
     (15, 'Aloes', 'Aloe Vera Facial Mist', 200, 27.00, 5.40, 32.40, 490, 'Refreshing aloe mist for skin hydration.', NOW(), NOW(), '\x', 'image/png'),
     (16, 'Probiotics', 'Daily Wellness Probiotic', 115, 22.00, 4.40, 26.40, 460, 'A daily probiotic formula for gut and immune health.', NOW(), NOW(), '\x', 'image/jpeg'),
     (17, 'Collagen', 'Collagen Youth Booster', 135, 41.00, 8.20, 49.20, 390, 'Supports youthful skin and strong hair.', NOW(), NOW(), '\x', 'image/png'),
@@ -103,7 +104,8 @@ VALUES
     (47, 'Collagen', 'Collagen + Hyaluronic Acid', 135, 44.00, 8.80, 52.80, 390, 'Collagen supplement with added hydration benefits.', NOW(), NOW(), '\x', 'image/png'),
     (48, 'Vitamins', 'Vitamin K2 + D3', 160, 24.00, 4.80, 28.80, 340, 'Essential for calcium absorption and bone health.', NOW(), NOW(), '\x', 'image/jpeg'),
     (49, 'Minerals', 'Chromium Sugar Balance', 145, 17.50, 3.50, 21.00, 320, 'Supports healthy blood sugar levels.', NOW(), NOW(), '\x', 'image/png'),
-    (50, 'Aloes', 'Aloe Vera Hair Serum', 210, 29.00, 5.80, 34.80, 470, 'Aloe-infused serum for healthy, shiny hair.', NOW(), NOW(), '\x', 'image/jpeg');
+    (50, 'Aloes', 'Aloe Vera Hair Serum', 210, 29.00, 5.80, 34.80, 470, 'Aloe-infused serum for healthy, shiny hair.', NOW(), NOW(), '\x', 'image/jpeg'),
+    (51, 'Minerals', 'Iron Formula', 100, 16.00, 3.20, 19.20, 330, 'A powerful iron absorption', NOW(), NOW(), '\x', 'image/jpeg');
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------  TABLE CART  -------------------------------------------------------------------------------------  
@@ -360,7 +362,7 @@ VALUES
     (5, 'user8', 'Olivia', 'Moore', 'olivia.moore@example.com', '+3344556677', 
      120.00, 147.60, 10.00, 12.30, 130.00, 159.90, 'Canceled', NOW() - INTERVAL '46 days', NOW()),
 
-    (6, 'user10', 'Sophia', 'Taylor', 'sophia.taylor@example.com', '+1122446688', 
+    (6, 'user10', 'Sophia', 'Taylor', 'sophia.taylor@example.com', '+123456789', 
      180.00, 221.40, 12.00, 14.76, 192.00, 236.16, 'WaitingForBankTransfer', NOW() - INTERVAL '45 days', NOW()),
 
     (7, 'user1', 'John', 'Doe', 'john.doe@example.com', '+123456789', 
@@ -642,7 +644,7 @@ VALUES
     (99, 'user6', 'Emily', 'White', 'emily.white@example.com', '+5566778899', 
      175.00, 215.25, 14.00, 17.22, 189.00, 232.47, 'PreparationForShipping', NOW() - INTERVAL '2 days', NOW()), 
 
-    (100, 'user8', 'Olivia', 'Moore', 'olivia.moore@example.com', '+3344556677', 
+    (100, 'user8', 'Olivia', 'Moore', 'olivia.moore@example.com', null, 
      95.00, 116.85, 10.00, 12.30, 105.00, 129.15, 'Delivered', NOW() - INTERVAL '1 day', NOW());
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
