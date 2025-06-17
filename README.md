@@ -27,5 +27,5 @@ Dive into the exercises, follow the warrior's journey, and train your SQL instin
 
 ## 👤 About the Project
 
-Created by a developer passionate about backend systems, clean SQL, and product-minded thinking.  
+Created by a developer passionate about SQL, code clarity, and product-oriented thinking.
 If this helps you — feel free to ⭐ the repo or share it with others.
