@@ -9,7 +9,7 @@ This repository provides:
 - A **PostgreSQL SQL script** to populate a local database with tables and sample data
 - A structure modeled after a real e-commerce system (users, carts, orders, etc.)
 
-Once loaded, you can solve 76 kata-style SQL exercises — from basic `SELECT`s to advanced queries.
+Once loaded, you can solve 74 kata-style SQL exercises — from basic `SELECT`s to advanced queries.
 
 ## 🚀 How to Start
 
